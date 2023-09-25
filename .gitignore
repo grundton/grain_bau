@@ -1,0 +1,6 @@
+# ignore all wav files
+# not needed anymore, because of own sounds
+#*.wav
+
+#ignore all DS stores
+*.DS_Store
