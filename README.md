@@ -12,7 +12,8 @@ Effects can be controlled via the provided GUI or using a MIDI keyboard with kno
 Coming soon.
 
 ## Installation
--PD
+To install, you will need a running version of Pure Data.
+
 -Libraries
 
 ## Usage
