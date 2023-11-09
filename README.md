@@ -41,7 +41,7 @@ The following pure data externals are needed, if you are going to use the custom
 * cyclone/fromsymbol
 
 You can find the comport external as well as the the cyclone library via the menu bar:
-
+![alt text](images/find_external.png "Find externals from the menu bar")
 * Help > Find externals
 
 If you are planning on only using the keyboard version, you can skip the part for the custom physical interface.
@@ -73,18 +73,20 @@ If you plan to use the custom midi interface you need to do the following:
 Press the *Connect ESP* toggle. This will enable the serial communication between the interface and the PD patch.
 ![alt text](images/connect_esp.png "Turn on ESP")
 
-If you want to use a MIDI controller to controll the effects, for example switchingbetween samples, you need to connect a MIDI controller, by changing the number box to the correct instance. If you only have 1 or 2 controlelrs connected you can simply press the buttons below to choose the right one:
+If you want to use a MIDI controller to controll the effects, for example switching between samples, you need to connect a MIDI controller, by changing the number box to the correct instance. If you only have 1 or 2 controllers connected, you can simply press the buttons below to choose the right one:
 ![alt text](images/enable_midi_keyboard.png "Turn on MIDI Keyboard")
 I used an Arturia minilab mkII to controll the synthesis parameter using the rotary knobs.
-| Controller No.  | 74             | 71            | 76             | 77            | 93             | 73            | 75             | 18               | 19              |               |
-| -------------   |:-------------: |:-------------:|:-------------: |:-------------:|:-------------: |:-------------:|:-------------: |:----------------:|:-------------:  |:-------------:|
-| Parameter       | Volume of Loop | Grain Size    | Reverb Amount  | Dry/wet Loop  | Dry/Wet Direct | Stereo Diff   | Pitch Range    | Random Grain Size| Random Grain Pos| Grain Size    |
+| Controller No.  | 74             | 71            | 76             | 77            | 93             | 73            | 75             | 18               | 19              |
+| -------------   |:-------------: |:-------------:|:-------------: |:-------------:|:-------------: |:-------------:|:-------------: |:----------------:|:-------------:  |
+| Parameter       | Volume of Loop | Grain Size    | Reverb Amount  | Dry/wet Loop  | Dry/Wet Direct | Stereo Diff   | Pitch Range    | Random Grain Size| Random Grain Pos|
 
 The MIDI notes 48, 52 and 55 are used to select the previous soundfile, select the next soundfile, and to start the looping effect.
 
 ### Midi keyboard ONLY
 If you plan to use the MIDI keyboard version without the controller, make sure to check the toggle and select the right MIDI keyboard.
-![alt text](images/enable_midi_on_FX.png "Turn on MIDI Keyboard")
+
+![alt text](images/midi_on_FX.png "Turn on MIDI Keyboard")
+
 Instead of using the cart to scroll through the sample, use the keys of the MIDI keyboard.
 Do not forget that the MIDI notes 48, 52 and 55 are used to select the previous soundfile, select the next soundfile, and to start the looping effect in addition to playing back from positions inside the sample, but you can change that inside *granular_dan_bau.pd* > *pd sample_pick_keyboard*.
 If you want to spread the sample position across your keyboard, you can set the lower_limit and upper_limit number boxes to the lowest and highst midi notes you plan to use.
