@@ -14,18 +14,18 @@ If you are planning on using only the keyboard version, you will only need a MID
 If you are planning on building the custom physical interface, there are several parts you need for it. These are the ones I used:
 
 #### Microcontroller
-⋅⋅* An [ESP32S3-Devkit](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html) or any other [CircuitPython](https://circuitpython.org)-ready microcontroller that has enough pins.
+* An [ESP32S3-Devkit](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html) or any other [CircuitPython](https://circuitpython.org)-ready microcontroller that has enough pins.
 
 #### Sensor Units
-⋅⋅* A copperfoil plate.
-⋅⋅* A VL53L0X distance sensor unit, for example [this](https://shop.m5stack.com/products/tof-sensor-unit)
-⋅⋅* A fader potentiometer.
-⋅⋅* A rotary potentiometer.
+* A copperfoil plate.
+* A VL53L0X distance sensor unit, for example [this](https://shop.m5stack.com/products/tof-sensor-unit)
+* A fader potentiometer.
+* A rotary potentiometer.
 
 #### Trolley System
 The unit is built on top of a trolley system, which consists of two parts:
-⋅⋅* A trolley
-⋅⋅* A V-slot frame with a rail 
+* A trolley
+* A V-slot frame with a rail 
 
 #### Housing
 The housing is done with custom 3D prints. 
@@ -36,13 +36,13 @@ The housing is done with custom 3D prints.
 To install, you will need a running version of [Pure Data](https://msp.ucsd.edu/software.html).
 The following pure data externals are needed, if you are going to use the custom physical interface:
 
-⋅⋅* comport
-⋅⋅* cyclone/zl group
-⋅⋅* cyclone/fromsymbol
+* comport
+* cyclone/zl group
+* cyclone/fromsymbol
 
 You can find the comport external as well as the the cyclone library via the menu bar:
 
-⋅⋅* Help > Find externals
+* Help > Find externals
 
 If you are planning on only using the keyboard version, you can skip the part for the custom physical interface.
 
@@ -71,7 +71,7 @@ Press the Enable DSP toggle in order to turn on DSP.
 If you plan to use the custom midi interface you need to do the following:
 
 Press the *Connect ESP* toggle. This will enable the serial communication between the interface and the PD patch.
-![alt text](images/enable_esp.png "Turn on ESP")
+![alt text](images/connect_esp.png "Turn on ESP")
 
 If you want to use a MIDI controller to controll the effects, for example switchingbetween samples, you need to connect a MIDI controller, by changing the number box to the correct instance. If you only have 1 or 2 controlelrs connected you can simply press the buttons below to choose the right one:
 ![alt text](images/enable_midi_keyboard.png "Turn on MIDI Keyboard")
