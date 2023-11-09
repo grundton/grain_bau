@@ -11,6 +11,7 @@ Effects can be controlled via the provided GUI or using a MIDI keyboard with kno
 If you are planning on using only the keyboard version, you will only need a MIDI controller.
 
 ### Custom physical interface
+The Gran Bau interface is based on the traditional vietnamese instrument *dan bau* and makes use of related playing gestures.
 If you are planning on building the custom physical interface, there are several parts you need for it. These are the ones I used:
 
 #### Microcontroller
@@ -56,8 +57,9 @@ Another library you might need is the [Adafruit Circuitpython Midi library](http
 ## Usage
 
 ### General Usage
-The fastes way to play would be opening up the *top_level.pd patch*.
+The fastes way to play is opening up the *top_level.pd patch*.
 It contains the graphical interface of the patch *granular_dan_bau.pd* as well as a graphical keayboard visualizer called *keyboard.pd* and a midi slider representation called *midi-fader.pd*.
+This patch contains everything for both the MIDI keyboard only version as well as the custom physical interface.
 ![alt text](images/top_level.png "Open top_level.pd")
 
 The button *Load all* loads up to 16 soundfiles contained in the folder *samples* into memory. You can choose a sample by dragging across the number box or double clicking and entering a number.
