@@ -40,7 +40,7 @@ The following pure data externals are needed, if you are going to use the custom
 * cyclone/zl group
 * cyclone/fromsymbol
 
-You can find the comport external as well as the the cyclone library via the menu bar:
+You can find the comport external as well as the cyclone library via the menu bar:
 ![alt text](images/find_external.png "Find externals from the menu bar")
 * Help > Find externals
 
