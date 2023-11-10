@@ -29,7 +29,8 @@ The unit is built on top of a trolley system, which consists of two parts:
 * A V-slot frame with a rail 
 
 #### Housing
-The housing is done with custom 3D prints. 
+The housing is done with custom 3D prints. The STL-files can be found in the folder cart_stl.
+![alt text](images/cart_parts.png "STL files for the cart")
 
 
 ## Installation
