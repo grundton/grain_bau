@@ -1,4 +1,5 @@
 # Gran Bau
+![alt text](images/gran_bau.jpg "Performance on the Gran Bau")
 
 ## Description
 This project is part of my dissertation thesis.
