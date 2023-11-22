@@ -4,7 +4,7 @@
 ## Description
 This project is part of my doctoral studies at [mdw](https://iwk.mdw.ac.at) with the artistic research project [Études for Live-Electronics](https://iwk.mdw.ac.at/hofmann/peek-etudes/) (FWF AR743).
 The development of this live-electronic setup was a collaboration with the composer [Lương Huệ Trinh](http://www.luonghuetrinh.com).
-It contains a granular synthesizer that is played via a custom physical interface based on the vietnamese instrument *dan bau*.
+It contains a granular synthesizer that is played via a custom physical interface based on the vietnamese instrument *Đàn bầu*.
 Alternatively it can be played using a MIDI keyboard.
 Effects can be controlled via the provided GUI or using a MIDI keyboard with knobs/faders.
 
