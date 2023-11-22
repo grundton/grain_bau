@@ -1,12 +1,34 @@
-# Gran Bau
-![alt text](images/gran_bau2.jpg "Performance on the Gran Bau")
+# Grain Bau
+![alt text](images/grain_bau.jpg "The author performing on the Grain Bau")
 
 ## Description
-This project is part of my dissertation thesis.
+This project is part of my doctoral studies at [mdw](https://iwk.mdw.ac.at) with the artistic research project [Études for Live-Electronics](https://iwk.mdw.ac.at/hofmann/peek-etudes/) (FWF AR743).
+The development of this live-electronic setup was a collaboration with the composer [Lương Huệ Trinh](http://www.luonghuetrinh.com).
 It contains a granular synthesizer that is played via a custom physical interface based on the vietnamese instrument *dan bau*.
 Alternatively it can be played using a MIDI keyboard.
 Effects can be controlled via the provided GUI or using a MIDI keyboard with knobs/faders.
 
+
+## Installation
+### Pure Data (PD)
+To install, you will need a running version of [Pure Data](https://msp.ucsd.edu/software.html) (Version > 0.53-2).
+The following pure data externals are needed, if you are going to use the custom physical interface:
+
+* comport
+* cyclone/zl group
+* cyclone/fromsymbol
+
+You can find the comport external as well as the cyclone library via the menu bar:
+![alt text](images/find_external.png "Find externals from the menu bar")
+* Help > Find externals
+
+If you are planning on only using the keyboard version, you can skip the part for the custom physical interface.
+
+### Custom physical interface
+For the custom physical interface you need to have a microcontroller, which is able to run [CircuitPython](https://circuitpython.org).
+The folder *code_esp32s3* contains the *code.py* file, which you to put on your CircuitPython microcontroller.
+It also contains the *adafruit_CircuitPython_VL53L0X.py*, which you should put in the lib folder of your microcontroller if you want to use the ToF distance sensor.
+Another library you might need is the [Adafruit Circuitpython Midi library](https://docs.circuitpython.org/projects/midi/en/latest/api.html).
 
 ## Hardware
 If you are planning on using only the keyboard version, you will only need a MIDI controller.
@@ -34,28 +56,6 @@ The housing is done with custom 3D prints. The STL-files can be found in the fol
 ![alt text](images/cart_parts.png "STL files for the cart")
 
 
-## Installation
-### Pure Data (PD)
-To install, you will need a running version of [Pure Data](https://msp.ucsd.edu/software.html).
-The following pure data externals are needed, if you are going to use the custom physical interface:
-
-* comport
-* cyclone/zl group
-* cyclone/fromsymbol
-
-You can find the comport external as well as the cyclone library via the menu bar:
-![alt text](images/find_external.png "Find externals from the menu bar")
-* Help > Find externals
-
-If you are planning on only using the keyboard version, you can skip the part for the custom physical interface.
-
-### Custom physical interface
-For the custom physical interface you need to have a microcontroller, which is able to run [CircuitPython](https://circuitpython.org).
-The folder *code_esp32s3* contains the *code.py* file, which you to put on your CircuitPython microcontroller.
-It also contains the *adafruit_CircuitPython_VL53L0X.py*, which you should put in the lib folder of your microcontroller if you want to use the ToF distance sensor.
-Another library you might need is the [Adafruit Circuitpython Midi library](https://docs.circuitpython.org/projects/midi/en/latest/api.html).
-
-
 ## Usage
 
 ### General Usage
@@ -70,6 +70,15 @@ Another way is to use a secondary MIDI device, which will be discussed later. Ma
 
 Press the Enable DSP toggle in order to turn on DSP.
 ![alt text](images/enable_dsp.png "Turn on DSP")
+
+### Midi keyboard ONLY
+If you plan to use the MIDI keyboard version without the controller, make sure to check the toggle and select the right MIDI keyboard.
+
+![alt text](images/midi_on_FX.png "Turn on MIDI Keyboard")
+
+Instead of using the cart to scroll through the sample, use the keys of the MIDI keyboard.
+Keep in mind that the MIDI notes 48, 52 and 55 are used to select the previous soundfile, select the next soundfile, and to start the looping effect in addition to playing back from positions inside the sample, but you can change that inside *granular_dan_bau.pd* > *pd sample_pick_keyboard*.
+If you want to spread the sample position across your keyboard, you can set the lower_limit and upper_limit number boxes to the lowest and highst midi notes you plan to use.
 
 ### Custom Physical Interface
 If you plan to use the custom midi interface you need to do the following:
@@ -86,14 +95,7 @@ I used an Arturia minilab mkII to controll the synthesis parameter using the rot
 
 The MIDI notes 48, 52 and 55 are used to select the previous soundfile, select the next soundfile, and to start the looping effect.
 
-### Midi keyboard ONLY
-If you plan to use the MIDI keyboard version without the controller, make sure to check the toggle and select the right MIDI keyboard.
 
-![alt text](images/midi_on_FX.png "Turn on MIDI Keyboard")
-
-Instead of using the cart to scroll through the sample, use the keys of the MIDI keyboard.
-Do not forget that the MIDI notes 48, 52 and 55 are used to select the previous soundfile, select the next soundfile, and to start the looping effect in addition to playing back from positions inside the sample, but you can change that inside *granular_dan_bau.pd* > *pd sample_pick_keyboard*.
-If you want to spread the sample position across your keyboard, you can set the lower_limit and upper_limit number boxes to the lowest and highst midi notes you plan to use.
 
 ## Support
 This repository is maintained by [me](https://github.com/grundton).
