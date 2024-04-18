@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/696203444.svg)](https://zenodo.org/doi/10.5281/zenodo.10992538)
+
 # Grain Bau
 ![alt text](images/grain_bau.jpg "The author performing on the Grain Bau")
 
